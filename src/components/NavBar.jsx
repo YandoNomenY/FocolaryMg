@@ -17,7 +17,7 @@ const Navbar = () => {
         {/* Logo */}
         <Link to='/' className='flex items-center'>
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 flex items-center justify-center border border-slate-500/20 shadow-red-200 rounded-2xl overflow-hidden">
+            <div className="w-10 h-10 flex items-center justify-center border-slate-500/20 shadow-red-200 overflow-hidden">
               <img src={foco} alt='Logo Focolary' className='' />
             </div>
             <span className='text-xl sm:text-2xl font-black bg-linear-to-r from-blue-500 to-amber-300 bg-clip-text text-transparent'>
