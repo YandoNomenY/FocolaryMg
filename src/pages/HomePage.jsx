@@ -1,53 +1,24 @@
 import Navbar from "../components/NavBar";
-import React, { useState, useEffect, useRef } from 'react';
-import * as THREE from 'three';
-import CLOUDS from 'vanta/dist/vanta.clouds.min';
+import { HeroSection } from "../components/HeroSection";
+import { Mouvement } from "../components/Mouvement";
+import { Actualite } from "../components/Actualite";
+import { useState } from "react";
 
-// Rendre THREE accessible globalement pour Vanta
-if (typeof window !== 'undefined') {
-  window.THREE = THREE;
-}
 
 export const HomePage = () => {
-  const vantaRef = useRef(null);
-  const [vantaEffect, setVantaEffect] = useState(null);
+  const [theme, setTheme] = useState('light'); // 'light' ou 'dark'
 
-  useEffect(() => {
-    // Vérification que le ref est bien disponible
-    if (!vantaEffect && vantaRef.current) {
-      // Si CLOUDS n'est pas directement une fonction, on utilise .default ou window.VANTA
-      const cloudsEffect = typeof CLOUDS === 'function' 
-        ? CLOUDS 
-        : (CLOUDS.default || window.VANTA?.CLOUDS);
-
-      if (cloudsEffect) {
-        setVantaEffect(
-          cloudsEffect({
-            el: vantaRef.current,
-            THREE: THREE,
-            skyColor: 0x1baaf1,    // Couleur du ciel
-            cloudColor: 0xffffff,  // Couleur des nuages
-            cloudShadowColor: 0x183550,
-            sunGlareColor: 0xff6600,     // Couleur de l'éblouissement solaire
-            sunColor: 0xf1d35b,
-            sunlightColor: 0xff9900,    // Couleur de la lumière diffusée
-            speed: 0.50,            // Vitesse de déplacement des nuages
-            mouseEase: true             // Interaction avec la souris
-          })
-        );
-      }
-    }
-
-    // Nettoyage lors du démontage du composant
-    return () => {
-      if (vantaEffect) vantaEffect.destroy();
-    };
-  }, [vantaEffect]);
+  const toggleTheme = () => {
+    setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
+  };
 
   return (
-    <div ref={vantaRef} className="min-h-screen w-full relative">
+    <div  className="min-h-screen w-full overflow-x-hidden">
       {/* Barre de navigation */}
-      <Navbar />
+      <Navbar theme={theme} toggleTheme={toggleTheme} />
+      <HeroSection theme={theme}/>
+      <Mouvement />
+      <Actualite />
     </div>
   );
 };
