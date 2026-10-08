@@ -59,7 +59,7 @@ function CosmicGlow() {
 
 const DarkHero = () => {
   return (
-    <div className="relative w-full h-screen bg-[#020617] overflow-hidden">
+    <div className="relative w-full h-screen bg-[#020617] overflow-hidden touch-pan-y">
       <Canvas camera={{ position: [0, 0, 1], fov: 75 }}>
         <OrbitControls enableZoom={false} enablePan={false} rotateSpeed={0.4} autoRotate={false} />
         <CosmicGlow />
@@ -67,7 +67,7 @@ const DarkHero = () => {
       </Canvas>
 
     {/* 1. Dégradé subtil en bas pour fondre la ligne d'horizon */}
-      <div className="absolute bottom-0 inset-x-0 h-40 bg-gradient-to-t from-[#020617] via-[#020617]/60 to-transparent pointer-events-none z-10" />
+      <div className="absolute bottom-0 inset-x-0 h-40 bg-linear-to-t from-[#020617] via-[#020617]/60 to-transparent pointer-events-none z-10" />
 
       {/* 2. Silhouette sombre de montagne/forêt */}
       <MountainLandscape />
@@ -110,7 +110,7 @@ const LightHero = () => {
   }, [vantaEffect]);
 
   return (
-    <div className="relative w-full h-screen bg-gradient-to-b from-[#1baaf1] via-[#fffdf0] to-[#f8fafc] overflow-hidden">
+    <div className="relative w-full h-screen bg-linear-to-b from-[#1baaf1] via-[#fffdf0] to-[#f8fafc] overflow-hidden">
       <div 
         className="absolute inset-0 pointer-events-none z-10"
         style={{
@@ -125,7 +125,7 @@ const LightHero = () => {
           maskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 45%, rgba(0,0,0,0) 80%)'
         }}
       />
-      <div className="absolute bottom-0 inset-x-0 h-24 bg-gradient-to-b from-transparent to-[#f8fafc] pointer-events-none z-20" />
+      <div className="absolute bottom-0 inset-x-0 h-24 bg-linear-to-b from-transparent to-[#f8fafc] pointer-events-none z-20" />
     </div>
   );
 };

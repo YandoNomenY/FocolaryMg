@@ -105,6 +105,8 @@ const Navbar = ({ theme, toggleTheme }) => {
           <Link to="/" onClick={() => setIsOpen(false)} className="px-4 py-2.5 rounded-xl hover:bg-slate-500/10 font-medium transition-colors">
             Contact
           </Link>
+                    <button className="  items-center text-center gap-3 p-3  bg-white backdrop-blur-xl  border-gray-200 rounded-2xl  duration-300 hover:scale-[1.03] text-blue-600 text-lg font-bold cursor-pointer hover:text-amber-500 transition-colors border w-full">Connexion</button>
+
         </div>
       </div>
     </div>

@@ -17,8 +17,8 @@ export const HomePage = () => {
       {/* Barre de navigation */}
       <Navbar theme={theme} toggleTheme={toggleTheme} />
       <HeroSection theme={theme}/>
-      <Mouvement />
-      <Actualite />
+      <Mouvement theme={theme}/>
+      <Actualite theme={theme} />
     </div>
   );
 };
