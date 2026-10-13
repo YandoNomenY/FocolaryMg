@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Sun, Moon } from 'lucide-react';
 import foco from "../assets/logo/foco.png";
@@ -7,13 +7,35 @@ import { navbarStyles as style } from '../utils/style';
 const Navbar = ({ theme, toggleTheme }) => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Si on a défilé de plus de 50px vers le bas
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
   return (
-    <div className='py-2.5 px-4 md:px-2 absolute left-1/2 -translate-x-1/2 w-full max-w-6xl top-0 z-50 bg-transparent'>
-      <div className={`max-w-6xl mx-auto flex items-center justify-between border px-3 py-1.5 rounded-2xl transition-colors duration-300 ${
+    <div className={`py-2.5 px-4 md:px-2  left-1/2 -translate-x-1/2 w-full  max-w-10xl top-0 z-50 bg-transparent
+      ${
+        isScrolled
+          ? 'fixed  backdrop-blur-md shadow-lg border-0.5-b border-slate-500/50'
+          : 'absolute bg-transparent'
+      }`
+    }>
+      <div className={`max-w-7xl mx-auto flex items-center justify-between border px-3 py-1.5 rounded-2xl transition-colors duration-300 ${
         theme === 'dark' ? 'border-slate-800 bg-slate-900/80 text-white' : 'border-slate-200 bg-white/70 text-slate-800'
       }`}>
         
@@ -23,7 +45,7 @@ const Navbar = ({ theme, toggleTheme }) => {
             <div className="w-10 h-10 flex items-center justify-center border-slate-500/20 shadow-red-200 overflow-hidden">
               <img src={foco} alt='Logo Focolary' />
             </div>
-            <span className='text-xl sm:text-2xl font-black bg-gradient-to-r from-blue-500 to-amber-300 bg-clip-text text-transparent'>
+            <span className='text-xl sm:text-2xl font-black bg-linear-to-r from-blue-500 to-amber-300 bg-clip-text text-transparent'>
               Focolary.mg
             </span>
           </div>
@@ -57,12 +79,12 @@ const Navbar = ({ theme, toggleTheme }) => {
             )}
           </button>
 
-          <button className={style.logButton}>Connexion</button>
+          <button className={style.logButton}>Se Connecter</button>
 
           {/* Hamburger / X Button Animé */}
           <button 
             onClick={toggleMenu} 
-            className='sm:hidden flex flex-col justify-center items-center w-10 h-10 rounded-xl focus:outline-none p-2 space-y-1.5 cursor-pointer'
+            className='md:hidden flex flex-col justify-center items-center w-10 h-10 rounded-xl focus:outline-none p-2 space-y-1.5 cursor-pointer'
             aria-label="Toggle Menu"
           >
             <span 
@@ -105,7 +127,7 @@ const Navbar = ({ theme, toggleTheme }) => {
           <Link to="/" onClick={() => setIsOpen(false)} className="px-4 py-2.5 rounded-xl hover:bg-slate-500/10 font-medium transition-colors">
             Contact
           </Link>
-                    <button className="  items-center text-center gap-3 p-3  bg-white backdrop-blur-xl  border-gray-200 rounded-2xl  duration-300 hover:scale-[1.03] text-blue-600 text-lg font-bold cursor-pointer hover:text-amber-500 transition-colors border w-full">Connexion</button>
+                    <button className="  items-center text-center gap-3 p-3  bg-white backdrop-blur-xl  border-gray-200 rounded-2xl  duration-300 hover:scale-[1.03] text-blue-600 text-lg font-bold cursor-pointer hover:text-amber-500 transition-colors border w-full">Se Connecter</button>
 
         </div>
       </div>
