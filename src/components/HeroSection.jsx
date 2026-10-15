@@ -4,6 +4,7 @@ import { Stars, OrbitControls } from '@react-three/drei';
 import * as THREE from 'three';
 import CLOUDS from 'vanta/dist/vanta.clouds.min';
 import MountainLandscape from './MountainLandscape';
+import { InfiniteMarquee } from './InfiniteMarquee';
 
 if (typeof window !== 'undefined') {
   window.THREE = THREE;
@@ -15,13 +16,19 @@ if (typeof window !== 'undefined') {
 const HeroContent = ({ theme }) => {
   const isDark = theme === 'dark';
 
+  const myGroups = [
+    "Mitia mialoha",
+    "Mijery an'i Jesoa ao amin'ny hafa",
+    ""
+  ]
+
   return (
-    <div className="absolute inset-0 z-30 flex flex-col items-center justify-center px-4 sm:px-6 text-center pointer-events-none">
+    <div className="absolute space-y-20 inset-0 z-30 flex flex-col items-center justify-center px-4 sm:px-6 text-center pointer-events-none h-screen ">
       {/* 
         pointer-events-none sur le conteneur parent pour laisser passer le drag/interaction Three.js,
         et pointer-events-auto sur les boutons/liens pour qu'ils restent cliquables.
       */}
-      <div className="max-w-4xl mx-auto space-y-6 pointer-events-auto">
+      <div className="max-w-4xl mx-auto space-y-6 pointer-events-auto mt-20 ">
         
         {/* Badge d'en-tête */}
         <div className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs sm:text-sm font-medium transition-colors ${
@@ -75,8 +82,9 @@ const HeroContent = ({ theme }) => {
             Connaitre le Mouvement
           </button>
         </div>
-
+          
       </div>
+      <InfiniteMarquee words={myGroups} speed="25s" direction="left" theme={theme}/>
     </div>
   );
 };
