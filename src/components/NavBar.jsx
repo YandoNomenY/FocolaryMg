@@ -53,10 +53,10 @@ const Navbar = ({ theme, toggleTheme }) => {
 
         {/* Menu Desktop */}
         <div className={style.menuContainer}>
-          <Link to="/"><div className={style.menuItem}>Accueil</div></Link>
+          <a href="#accueil"><div className={style.menuItem}>Accueil</div></a>
           <Link to="/"><div className={style.menuItem}>Mouvement</div></Link>
-          <Link to="/"><div className={style.menuItem}>Actualités</div></Link>
-          <Link to="/"><div className={style.menuItem}>Contact</div></Link>
+          <a href="#actualite"><div className={style.menuItem}>Actualités</div></a>
+          <a href="#contact"><div className={style.menuItem}>Contact</div></a>
         </div>
 
         {/* Actions (Bouton Thème + Bouton Connexion + Bouton Hamburger) */}
@@ -121,9 +121,9 @@ const Navbar = ({ theme, toggleTheme }) => {
           <Link to="/" onClick={() => setIsOpen(false)} className="px-4 py-2.5 rounded-xl hover:bg-slate-500/10 font-medium transition-colors">
             Mouvement
           </Link>
-          <Link to="/" onClick={() => setIsOpen(false)} className="px-4 py-2.5 rounded-xl hover:bg-slate-500/10 font-medium transition-colors">
+          <a href="#actualite"  className="px-4 py-2.5 rounded-xl hover:bg-slate-500/10 font-medium transition-colors">
             Actualités
-          </Link>
+          </a>
           <Link to="/" onClick={() => setIsOpen(false)} className="px-4 py-2.5 rounded-xl hover:bg-slate-500/10 font-medium transition-colors">
             Contact
           </Link>

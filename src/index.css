@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+
+html {
+  scroll-behavior: smooth;
+}
 @theme {
   --font-roboto: "Roboto", sans-serif;
   --font-unbounded: "Unbounded", sans-serif;
