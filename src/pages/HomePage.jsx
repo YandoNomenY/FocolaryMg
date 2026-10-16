@@ -20,14 +20,16 @@ export const HomePage = () => {
       <section id="accueil">
         <HeroSection theme={theme} />
       </section>
-      <Mouvement theme={theme} />
+      <section id="mouvement">
+        <Mouvement theme={theme} />
+      </section>
       <section id="actualite">
         <Actualite theme={theme} />
       </section>
       <section id="contact">
         <Contact theme={theme} />
       </section>
-      <section >
+      <section>
         <Footer theme={theme} />
       </section>
     </div>

@@ -54,7 +54,7 @@ const Navbar = ({ theme, toggleTheme }) => {
         {/* Menu Desktop */}
         <div className={style.menuContainer}>
           <a href="#accueil"><div className={style.menuItem}>Accueil</div></a>
-          <Link to="/"><div className={style.menuItem}>Mouvement</div></Link>
+          <a href="#mouvement"><div className={style.menuItem}>Mouvement</div></a>
           <a href="#actualite"><div className={style.menuItem}>Actualités</div></a>
           <a href="#contact"><div className={style.menuItem}>Contact</div></a>
         </div>
@@ -115,18 +115,18 @@ const Navbar = ({ theme, toggleTheme }) => {
         <div className={`w-full backdrop-blur-2xl border rounded-2xl p-4 shadow-xl flex flex-col gap-3 ${
           theme === 'dark' ? 'bg-slate-900/90 border-slate-800 text-white' : 'bg-white/70 border-slate-200/80 text-slate-700'
         }`}>
-          <Link to="/" onClick={() => setIsOpen(false)} className="px-4 py-2.5 rounded-xl hover:bg-slate-500/10 font-medium transition-colors">
+          <a href="#accueil" onClick={() => setIsOpen(false)} className="px-4 py-2.5 rounded-xl hover:bg-slate-500/10 font-medium transition-colors">
             Accueil
-          </Link>
-          <Link to="/" onClick={() => setIsOpen(false)} className="px-4 py-2.5 rounded-xl hover:bg-slate-500/10 font-medium transition-colors">
+          </a>
+          <a href="#mouvement" onClick={() => setIsOpen(false)} className="px-4 py-2.5 rounded-xl hover:bg-slate-500/10 font-medium transition-colors">
             Mouvement
-          </Link>
+          </a>
           <a href="#actualite"  className="px-4 py-2.5 rounded-xl hover:bg-slate-500/10 font-medium transition-colors">
             Actualités
           </a>
-          <Link to="/" onClick={() => setIsOpen(false)} className="px-4 py-2.5 rounded-xl hover:bg-slate-500/10 font-medium transition-colors">
+          <a href="#contact" onClick={() => setIsOpen(false)} className="px-4 py-2.5 rounded-xl hover:bg-slate-500/10 font-medium transition-colors">
             Contact
-          </Link>
+          </a>
                     <button className="  items-center text-center gap-3 p-3  bg-white backdrop-blur-xl  border-gray-200 rounded-2xl  duration-300 hover:scale-[1.03] text-blue-600 text-lg font-bold cursor-pointer hover:text-amber-500 transition-colors border w-full">Se Connecter</button>
 
         </div>
