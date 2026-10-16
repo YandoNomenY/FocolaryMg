@@ -5,6 +5,7 @@ import * as THREE from 'three';
 import CLOUDS from 'vanta/dist/vanta.clouds.min';
 import MountainLandscape from './MountainLandscape';
 import { InfiniteMarquee } from './InfiniteMarquee';
+import { Link } from 'react-router-dom';
 
 if (typeof window !== 'undefined') {
   window.THREE = THREE;
@@ -71,7 +72,7 @@ const HeroContent = ({ theme }) => {
               ? 'bg-sky-500 hover:bg-sky-400 text-slate-950 shadow-sky-500/20' 
               : 'bg-sky-600 hover:bg-sky-700 text-white shadow-sky-600/30'
           }`}>
-            Se connecter à UniGen
+            <Link to="/LoginPage">Se connecter à UniGen</Link>
           </button>
 
           <button className={`w-full sm:w-auto px-8 py-3.5 rounded-xl font-semibold text-sm transition-all border backdrop-blur-md active:scale-95 ${

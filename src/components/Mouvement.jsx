@@ -7,6 +7,7 @@ import {
   ArrowRight,
   History,
   Sparkles,
+  Landmark,
 } from "lucide-react";
 
 export const Mouvement = ({ theme = "light" }) => {
@@ -31,7 +32,7 @@ export const Mouvement = ({ theme = "light" }) => {
               : "bg-blue-100 text-blue-700 border border-blue-200"
           }`}
         >
-          <Sparkles className="w-4 h-4 text-amber-400" />
+          <Landmark className="w-4 h-4 text-amber-400" />
           <span>Histoire & Spiritualité</span>
         </div>
 
