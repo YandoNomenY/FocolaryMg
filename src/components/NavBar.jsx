@@ -223,6 +223,17 @@ const Navbar = ({ theme, toggleTheme }) => {
           >
             Actualités
           </a>
+          <Link
+            to="/activites"
+            onClick={() => setIsOpen(false)}
+            className={`px-4 py-2.5 rounded-xl font-medium transition-colors ${
+              activeSection === "contact"
+                ? "bg-blue-500/10 text-blue-500 font-bold"
+                : ""
+            }`}
+          >
+            Nos activités
+          </Link>
           <a
             href="#contact"
             onClick={() => setIsOpen(false)}
