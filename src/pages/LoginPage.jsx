@@ -110,7 +110,7 @@ export const LoginPage = () => {
 
       {/* 1ère SECTION : Présentation d'UniGen en Carrousel avec animation fluide */}
       <div 
-        className="w-full lg:w-1/2 min-h-[50vh] lg:min-h-screen bg-gradient-to-br from-blue-950 via-slate-900 to-indigo-950 p-8 sm:p-12 lg:p-16 flex flex-col justify-between relative overflow-hidden border-b lg:border-b-0 lg:border-r border-slate-800/85"
+        className="w-full lg:w-1/2 min-h-[50vh] lg:min-h-screen bg-linear-to-br from-blue-950 via-slate-900 to-indigo-950 p-8 sm:p-12 lg:p-16 flex flex-col justify-between relative overflow-hidden border-b lg:border-b-0 lg:border-r border-slate-800/85"
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
       >
@@ -119,7 +119,7 @@ export const LoginPage = () => {
         <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
 
         <div className="pt-12 lg:pt-0">
-          <span className="text-2xl font-black bg-gradient-to-r from-blue-400 to-amber-300 bg-clip-text text-transparent">
+          <span className="text-2xl font-black bg-linear-to-r from-blue-400 to-amber-300 bg-clip-text text-transparent">
             UniGen
           </span>
         </div>
@@ -237,7 +237,7 @@ export const LoginPage = () => {
 
             <button 
               type="submit"
-              className="w-full py-4 px-6 rounded-xl font-bold text-sm tracking-wide bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-lg shadow-blue-600/25 hover:from-blue-500 hover:to-indigo-500 active:scale-95 transition-all flex items-center justify-center gap-2 cursor-pointer"
+              className="w-full py-4 px-6 rounded-xl font-bold text-sm tracking-wide bg-linear-to-r from-blue-600 to-indigo-600 text-white shadow-lg shadow-blue-600/25 hover:from-blue-500 hover:to-indigo-500 active:scale-95 transition-all flex items-center justify-center gap-2 cursor-pointer"
             >
               <Lock className="w-4 h-4" />
               <span>Se connecter</span>
@@ -248,7 +248,7 @@ export const LoginPage = () => {
           <div className="pt-6 border-t border-slate-800/80 text-center">
             <p className="text-sm text-slate-400 mb-3">Nouveau sur la plateforme ?</p>
             <Link 
-              to="/register"
+              to="/SignupPage"
               className="w-full py-3.5 px-6 rounded-xl font-semibold text-sm border border-slate-800 bg-slate-900/80 text-slate-200 hover:bg-slate-800 hover:text-white transition-all block text-center shadow-md active:scale-95"
             >
               Je n'ai pas encore de compte

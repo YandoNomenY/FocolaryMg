@@ -163,7 +163,7 @@ export const Mouvement = ({ theme = "light" }) => {
       {/* Bouton "En savoir plus" */}
       <div>
         <Link
-          to="/mouvement/details"
+          to="/mouvementDetail"
           className={`inline-flex items-center gap-3 px-8 py-4 rounded-2xl font-bold text-sm tracking-wide transition-all shadow-xl active:scale-95 ${
             isDark
               ? "bg-sky-500 text-slate-950 hover:bg-sky-400 shadow-sky-500/20"
