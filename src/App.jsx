@@ -8,6 +8,7 @@ import { HomePage } from './pages/HomePage'
 import LoginPage from './pages/LoginPage'
 import RegisterPage from './pages/RegisterPage'
 import MouvementDetail from './pages/MouvementDetail'
+import ActivitesPage from './pages/ActivitesPage'
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
     <Route path="/LoginPage" element={ <LoginPage />} />
     <Route path="/SignupPage" element={ <RegisterPage />} />
     <Route path="/mouvementDetail" element={ <MouvementDetail />} />
+    <Route path="/activites" element={ <ActivitesPage />} />
   </Routes>
   )
 }

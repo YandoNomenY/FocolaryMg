@@ -20,7 +20,13 @@ const Navbar = ({ theme, toggleTheme }) => {
       }
 
       // Détection de la section active selon la position de défilement
-      const sections = ["accueil", "mouvement", "actualite", "contact"];
+      const sections = [
+        "accueil",
+        "mouvement",
+        "actualite",
+        "activites",
+        "contact",
+      ];
       const scrollPosition = window.scrollY + 200; // Décalage pour anticiper le changement
 
       for (const sectionId of sections) {
@@ -104,6 +110,9 @@ const Navbar = ({ theme, toggleTheme }) => {
           <a href="#actualite">
             <div className={getLinkClass("actualite")}>Actualités</div>
           </a>
+          <Link to="/activites">
+            <div className={getLinkClass("activites")}>Nos activités</div>
+          </Link>
           <a href="#contact">
             <div className={getLinkClass("contact")}>Contact</div>
           </a>

@@ -1,0 +1,110 @@
+{
+  "categories": {
+    "mariapoly": {
+      "title": "Mariapolis",
+      "description": "Les Mariapolis sont les grands rassemblements d'été annuels du Mouvement des Focolari, réunissant familles, jeunes et personnes de tous horizons pour vivre quelques jours de fraternité et d'échange spirituel."
+    },
+    "congres": {
+      "title": "Congrès",
+      "description": "Temps forts de formation, de réflexion approfondie et de partage d'expériences organisés pour les différentes branches du mouvement (jeunes, familles, professionnels)."
+    },
+    "casagen": {
+      "title": "Casa Gen",
+      "description": "Espaces et moments de rencontre, de vie communautaire et d'activités citoyennes dédiés à la jeunesse (Gen 2, Gen 3) pour bâtir un monde plus uni."
+    },
+    "projet_cim": {
+      "title": "Projets CIM",
+      "description": "Initiatives du Centre d'Inspiration et de Mobilisation axées sur l'action sociale, l'entrepreneuriat solidaire et le développement local à Madagascar."
+    }
+  },
+  "activities": [
+    {
+      "id": "act-1",
+      "category": "mariapoly",
+      "title": "Mariapolis Nationale 2027",
+      "theme": "Construire la fraternité et l'unité au cœur de notre société.",
+      "date": "15 07 2027",
+      "year": 2027,
+      "isUpcoming": true,
+      "imageUrl": "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=800&q=80",
+      "redirectUrl": "/activites/mariapolis-2027"
+    },
+    {
+      "id": "act-2",
+      "category": "mariapoly",
+      "title": "Mariapolis Antsirabe 2025",
+      "theme": "Unité et réconciliation dans la diversité culturelle.",
+      "date": "12 08 2025",
+      "year": 2025,
+      "isUpcoming": false,
+      "imageUrl": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80",
+      "redirectUrl": "/activites/mariapolis-2025"
+    },
+    {
+      "id": "act-3",
+      "category": "mariapoly",
+      "title": "Mariapolis Tananarive 2024",
+      "theme": "Foyers de lumière pour un monde solidaire.",
+      "date": "20 08 2024",
+      "year": 2024,
+      "isUpcoming": false,
+      "imageUrl": "https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=800&q=80",
+      "redirectUrl": "/activites/mariapolis-2024"
+    },
+    {
+      "id": "act-4",
+      "category": "congres",
+      "title": "Congrès National des Jeunes 2026",
+      "theme": "Engagés pour l'avenir : Leadership éthique et foi en action.",
+      "date": "10 11 2026",
+      "year": 2026,
+      "isUpcoming": true,
+      "imageUrl": "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80",
+      "redirectUrl": "/activites/congres-jeunes-2026"
+    },
+    {
+      "id": "act-5",
+      "category": "congres",
+      "title": "Congrès des Familles 2024",
+      "theme": "La famille, premier pilier d'amour et de paix.",
+      "date": "05 05 2024",
+      "year": 2024,
+      "isUpcoming": false,
+      "imageUrl": "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=800&q=80",
+      "redirectUrl": "/activites/congres-familles-2024"
+    },
+    {
+      "id": "act-6",
+      "category": "casagen",
+      "title": "Chantier Solidaire Casa Gen",
+      "theme": "Action citoyenne et reboisement communautaire.",
+      "date": "18 04 2025",
+      "year": 2025,
+      "isUpcoming": false,
+      "imageUrl": "https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=800&q=80",
+      "redirectUrl": "/activites/casagen-chantier-2025"
+    },
+    {
+      "id": "act-7",
+      "category": "projet_cim",
+      "title": "Forum de l'Entrepreneuriat Social CIM",
+      "theme": "Innovations locales et économie de communion à Madagascar.",
+      "date": "14 06 2025",
+      "year": 2025,
+      "isUpcoming": false,
+      "imageUrl": "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=800&q=80",
+      "redirectUrl": "/activites/cim-forum-2025"
+    },
+    {
+      "id": "act-8",
+      "category": "projet_cim",
+      "title": "Forum de l'Entrepreneuriat Social CIM",
+      "theme": "Innovations locales et économie de communion à Madagascar.",
+      "date": "14 06 2026",
+      "year": 2026,
+      "isUpcoming": false,
+      "imageUrl": "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=800&q=80",
+      "redirectUrl": "/activites/cim-forum-2025"
+    }
+  ]
+}
